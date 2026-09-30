@@ -14,31 +14,32 @@
     --purple:#6b4fd8; --purplebg:#f1edfc;
     --navy:#0f2b4d;
     --t1:#1e9e5a; --t2:#2b7bd4; --t2b:#7a5fd8; --t3:#98a3b3;
+    --s1:6px; --s2:12px; --s3:16px; --s4:20px; --s5:24px; --s6:32px; --s7:44px;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
-  body{font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; padding:20px 14px 60px; font-size:17px;}
+  body{font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; padding:var(--s5) var(--s3) 64px; font-size:17px;}
   .wrap{max-width:1020px; margin:0 auto;}
-  header{background:linear-gradient(135deg,#0f2b4d,#14528a); color:#fff; border-radius:14px 14px 0 0; padding:30px 30px 22px;}
-  header h1{font-size:1.6rem; margin-bottom:8px;}
+  header{background:linear-gradient(135deg,#0f2b4d,#14528a); color:#fff; border-radius:14px 14px 0 0; padding:var(--s6) var(--s5) var(--s5);}
+  header h1{font-size:1.6rem; margin-bottom:var(--s2);}
   header p{opacity:.93; font-size:1rem; max-width:760px;}
-  .tabs{display:flex; flex-wrap:wrap; gap:6px; background:#0d2440; padding:0 18px 14px; border-radius:0 0 14px 14px;}
+  .tabs{display:flex; flex-wrap:wrap; gap:8px; background:#0d2440; padding:0 var(--s4) var(--s3); border-radius:0 0 14px 14px;}
   .tab-btn{border:1px solid rgba(255,255,255,.28); background:rgba(255,255,255,.1); color:#fff; padding:8px 15px; border-radius:8px; cursor:pointer; font-size:.92rem; font-weight:600; display:inline-flex; align-items:center; gap:7px;}
   .tab-btn svg{flex:none;}
   .tab-btn:hover{background:rgba(255,255,255,.2);}
   .tab-btn.active{background:#fff; color:var(--navy); border-color:#fff;}
-  .tab{display:none; padding-top:8px;}
+  .tab{display:none; padding-top:var(--s2);}
   .tab.active{display:block;}
-  h2{font-size:1.3rem; margin:34px 0 6px; display:flex; align-items:center; gap:10px;}
-  h2:first-child{margin-top:18px;}
+  h2{font-size:1.3rem; margin:var(--s7) 0 var(--s2); display:flex; align-items:center; gap:10px;}
+  h2:first-child{margin-top:var(--s3);}
   h2 svg{flex:none; color:var(--navy);}
-  .sub{color:var(--muted); font-size:.95rem; margin-bottom:14px;}
-  .panel{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:22px; margin-top:14px;}
-  .panel h3{font-size:1.05rem; margin-bottom:6px; display:flex; align-items:center; gap:8px;}
+  .sub{color:var(--muted); font-size:.95rem; margin-bottom:var(--s3);}
+  .panel{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:var(--s5); margin-top:var(--s3);}
+  .panel h3{font-size:1.05rem; margin-bottom:8px; display:flex; align-items:center; gap:8px;}
   .panel h3 svg{color:var(--info); flex:none;}
-  .panel .note{font-size:.9rem; color:var(--muted); margin:6px 0 14px;}
+  .panel .note{font-size:.9rem; color:var(--muted); margin:4px 0 var(--s3);}
   table{width:100%; border-collapse:collapse; font-size:.9rem; background:var(--card); border-radius:12px; overflow:hidden;}
-  th{background:var(--navy); color:#fff; text-align:left; padding:9px 11px; font-size:.8rem; text-transform:uppercase; letter-spacing:.03em;}
-  td{padding:10px 11px; border-bottom:1px solid var(--line); vertical-align:top;}
+  th{background:var(--navy); color:#fff; text-align:left; padding:11px 12px; font-size:.8rem; text-transform:uppercase; letter-spacing:.03em;}
+  td{padding:12px; border-bottom:1px solid var(--line); vertical-align:top;}
   tr:last-child td{border-bottom:none;}
   td b{white-space:nowrap;}
   .nm{display:inline-flex; align-items:center; gap:8px; font-weight:700;}
@@ -47,21 +48,30 @@
   .t1{background:var(--goodbg); color:var(--t1);} .t2{background:var(--infobg); color:var(--t2);}
   .t2b{background:var(--purplebg); color:var(--t2b);} .t3{background:#eef1f5; color:var(--t3);}
   .doc{background:var(--warnbg); color:var(--warn); border-radius:6px; padding:1px 8px; font-size:.74rem; font-weight:700; white-space:nowrap;}
-  .stack-box{border-left:4px solid var(--good); padding:14px 18px; background:var(--goodbg); border-radius:0 10px 10px 0; margin-top:12px; font-size:.95rem;}
-  .stack-box b{display:block; margin-bottom:4px;}
-  .warn-box{border-left:4px solid var(--warn); padding:14px 18px; background:var(--warnbg); border-radius:0 10px 10px 0; margin-top:12px; font-size:.95rem;}
-  .bad-box{border-left:4px solid var(--bad); padding:14px 18px; background:var(--badbg); border-radius:0 10px 10px 0; margin-top:12px; font-size:.95rem;}
-  .drug-box{border-left:4px solid var(--purple); padding:14px 18px; background:var(--purplebg); border-radius:0 10px 10px 0; margin-top:12px; font-size:.95rem;}
-  .spec{border:2px solid #cfe2f5; background:linear-gradient(180deg,#fbfdff,#f2f7fd); border-radius:12px; padding:18px 20px; margin-top:12px;}
-  .spec h3{color:var(--info);}
-  .spec .line{display:grid; grid-template-columns:180px 1fr; gap:8px; padding:7px 0; border-bottom:1px dashed var(--line); font-size:.93rem;}
+  .pw{display:inline-flex; align-items:center; justify-content:center; min-width:30px; height:22px; border-radius:6px; font-size:.8rem; font-weight:800; color:#fff; padding:0 6px;}
+  .pw10,.pw9{background:#0d5c33;}
+  .pw8,.pw7{background:#1e9e5a;}
+  .pw6,.pw5{background:#c77700;}
+  .pw4,.pw3{background:#5a6a7e;}
+  .pw2,.pw1{background:#98a3b3;}
+  .pw-legend{display:flex; flex-wrap:wrap; align-items:center; gap:10px; font-size:.84rem; color:var(--muted); margin:var(--s2) 0 var(--s1);}
+  .stack-box,.warn-box,.bad-box,.drug-box{padding:var(--s3) var(--s4); border-radius:0 10px 10px 0; margin-top:var(--s3); font-size:.95rem;}
+  .stack-box{border-left:4px solid var(--good); background:var(--goodbg);}
+  .warn-box{border-left:4px solid var(--warn); background:var(--warnbg);}
+  .bad-box{border-left:4px solid var(--bad); background:var(--badbg);}
+  .drug-box{border-left:4px solid var(--purple); background:var(--purplebg);}
+  .stack-box b,.warn-box b,.bad-box b,.drug-box b{display:block; margin-bottom:4px;}
+  .spec{border:2px solid #cfe2f5; background:linear-gradient(180deg,#fbfdff,#f2f7fd); border-radius:12px; padding:var(--s4); margin-top:var(--s2);}
+  .spec h3{color:var(--info); margin-bottom:var(--s2);}
+  .spec .line{display:grid; grid-template-columns:180px 1fr; gap:8px; padding:var(--s2) 0; border-bottom:1px dashed var(--line); font-size:.93rem;}
   .spec .line:last-child{border-bottom:none;}
   .spec .k{font-weight:700; color:var(--navy);}
-  .hero{display:grid; grid-template-columns:1fr 1fr; gap:24px; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:22px; margin-top:16px; align-items:center;}
-  .hero .exp h3{margin-bottom:8px; font-size:1.08rem;} .hero .exp p{margin-bottom:10px; color:#3c4a5d; font-size:.95rem;}
+  .hero{display:grid; grid-template-columns:1fr 1fr; gap:var(--s5); background:var(--card); border:1px solid var(--line); border-radius:14px; padding:var(--s5); margin-top:var(--s3); align-items:center;}
+  .hero .exp h3{margin-bottom:10px; font-size:1.08rem;}
+  .hero .exp p{margin-bottom:var(--s2); color:#3c4a5d; font-size:.95rem;}
   .key{display:inline-flex; align-items:center; gap:7px; font-size:.84rem; margin:2px 8px 2px 0; color:var(--muted);}
   .key i{width:13px; height:13px; border-radius:3px; display:inline-block;}
-  .bar-row{display:grid; grid-template-columns:215px 1fr 135px; gap:10px; align-items:center; padding:7px 0; border-bottom:1px dashed var(--line);}
+  .bar-row{display:grid; grid-template-columns:210px 1fr 150px; gap:10px; align-items:center; padding:8px 0; border-bottom:1px dashed var(--line);}
   .bar-row:last-child{border-bottom:none;}
   .bar-label{font-size:.9rem; font-weight:600; display:inline-flex; align-items:center; gap:7px;}
   .bar-label svg{color:var(--muted); flex:none;}
@@ -69,25 +79,26 @@
   .bar-fill{height:100%; border-radius:6px;}
   .down{background:linear-gradient(90deg,#25b568,#1e9e5a);} .up{background:linear-gradient(90deg,#4a9be8,#2b7bd4);}
   .bar-val{font-size:.86rem; font-weight:700; text-align:right; white-space:nowrap;}
+  .bar-val .pw{margin-right:6px;}
   .down-c{color:var(--good);} .up-c{color:var(--info);}
-  .doors{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; margin-top:14px;}
-  .door{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; text-align:center;}
+  .doors{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:var(--s3); margin-top:var(--s3);}
+  .door{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:var(--s4); text-align:center;}
   .door h4{font-size:.96rem; margin-bottom:4px;} .door p{font-size:.85rem; color:var(--muted);}
-  .door .who{margin-top:6px; font-size:.8rem; color:var(--info); font-weight:600;}
-  .legend{display:flex; flex-wrap:wrap; gap:10px; margin:10px 0 4px; font-size:.84rem; align-items:center;}
-  ul.plain{padding-left:20px;} ul.plain li{margin:8px 0;}
+  .door .who{margin-top:var(--s2); font-size:.8rem; color:var(--info); font-weight:600;}
+  .legend{display:flex; flex-wrap:wrap; gap:10px; margin:var(--s2) 0 var(--s1); font-size:.84rem; align-items:center;}
+  ul.plain{padding-left:20px;} ul.plain li{margin:10px 0;}
   ul.plain a{color:var(--info); font-weight:600;}
-  .checklist li{list-style:none; padding-left:30px; position:relative; margin:10px 0;}
+  .checklist li{list-style:none; padding-left:30px; position:relative; margin:12px 0;}
   .checklist li::before{content:""; width:18px; height:18px; border:2px solid var(--info); border-radius:4px; position:absolute; left:0; top:3px; background:var(--infobg);}
-  .myth{border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin-top:10px;}
+  .myth{border:1px solid var(--line); border-radius:10px; padding:var(--s4); margin-top:var(--s2);}
   .myth .m{font-weight:700; color:var(--bad); display:flex; gap:8px; align-items:center;}
-  .myth .t{font-size:.93rem; margin-top:6px;}
+  .myth .t{font-size:.93rem; margin-top:8px;}
   .myth .t b{color:var(--good);}
-  .fig{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px; margin-top:14px; text-align:center;}
+  .fig{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:var(--s4); margin-top:var(--s3); text-align:center;}
   .fig svg{max-width:100%; height:auto;}
-  .fig .cap{font-size:.88rem; color:var(--muted); margin-top:10px;}
-  footer{margin-top:40px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:.85rem;}
-  @media(max-width:680px){ .hero{grid-template-columns:1fr;} .bar-row{grid-template-columns:120px 1fr 90px;} .spec .line{grid-template-columns:1fr;} body{font-size:16px;} }
+  .fig .cap{font-size:.88rem; color:var(--muted); margin-top:var(--s2);}
+  footer{margin-top:48px; padding-top:var(--s4); border-top:1px solid var(--line); color:var(--muted); font-size:.85rem;}
+  @media(max-width:680px){ .hero{grid-template-columns:1fr;} .bar-row{grid-template-columns:120px 1fr 108px;} .spec .line{grid-template-columns:1fr;} body{font-size:16px;} .bar-val{font-size:.74rem;} }
   @media print{ .tab{display:block !important;} .tabs{display:none;} header{border-radius:0;} body{padding:0; background:#fff; font-size:12px;} .panel,table,.hero,.spec,.fig{break-inside:avoid;} }
 </style>
 </head>
@@ -100,6 +111,8 @@
     <symbol id="i-drop" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2s6 6.6 6 11a6 6 0 1 1-12 0c0-4.4 6-11 6-11z"/></symbol>
     <symbol id="i-shield" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5l8-3z"/><path fill="#fff" d="M10.6 15.4l-2.8-2.8 1.3-1.3 1.5 1.5 4-4L16 10.1l-5.4 5.3z"/></symbol>
     <symbol id="i-flame" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c1.2 3.2 4.4 4.8 4.4 8.2a4.4 4.4 0 0 1-8.8 0c0-1.1.4-2.2 1.1-3-1.6 1.4-3.1 3.5-3.1 6A7.4 7.4 0 0 0 13 21.4 7.4 7.4 0 0 0 17.4 14c0-4.6-3.6-8.4-5.4-12z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></symbol>
+    <symbol id="i-smoke" viewBox="0 0 24 24"><rect x="3" y="13" width="14" height="4" rx="1" fill="currentColor"/><rect x="18" y="13" width="3" height="4" rx="1" fill="currentColor" opacity=".5"/><path d="M8 10c0-1.5 1.5-1.5 1.5-3M12 10c0-1.5 1.5-1.5 1.5-3" stroke="currentColor" fill="none" stroke-width="1.6" stroke-linecap="round"/></symbol>
     <symbol id="i-capsule" viewBox="0 0 24 24"><g transform="rotate(-30 12 12)"><rect x="4" y="9" width="16" height="7" rx="3.5" fill="currentColor"/><line x1="12" y1="9" x2="12" y2="16" stroke="#fff" stroke-width="1.6"/></g></symbol>
     <symbol id="i-pill" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="currentColor"/><path stroke="#fff" stroke-width="1.7" d="M4.6 12h14.8"/><path fill="#fff" opacity=".35" d="M12 3.5A8.5 8.5 0 0 0 12 20.5z"/></symbol>
     <symbol id="i-fish" viewBox="0 0 24 24"><path fill="currentColor" d="M3 12c3-4 7-5.5 11-4l4-3-1 4.5L20 14l-4 3 1-4.5c-4 1.5-8 0-11-3.5 0 0 0 3.5-2 3.5z"/><circle cx="7.5" cy="11" r=".9" fill="#fff"/></symbol>
@@ -156,15 +169,16 @@
 <section class="tab active" id="plan">
   <h2><svg width="26" height="26"><use href="#i-target"/></svg> The Plan, In Order</h2>
   <p class="sub">Do the things at the top first. They matter the most.</p>
+  <div class="pw-legend"><svg width="16" height="16" style="color:var(--muted)"><use href="#i-bolt"/></svg><b>Power score</b> (1 to 10): how much one change moves her risk, based on the trial numbers. <span class="pw pw10">9-10</span> huge <span class="pw pw8">7-8</span> strong <span class="pw pw6">5-6</span> solid <span class="pw pw4">3-4</span> small <span class="pw pw2">1-2</span> tiny</div>
   <div class="panel" style="border:3px solid var(--good);">
     <table>
-      <tr><th>#</th><th>Action</th><th>Why (the number)</th></tr>
-      <tr><td><b>1</b></td><td><b>Walk every day. Aim for 6,000 to 8,000 steps. More is fine.</b></td><td><b>12,000 steps vs 4,000 steps cut death risk by 65%</b> in a 10 year study (JAMA, 2020). 8,000 steps cut it by 51%. Even 4,400 steps cut it by 41% in women around age 72. Nothing else on this page comes close.</td></tr>
-      <tr><td><b>2</b></td><td><b>Use food, not just pills, for cholesterol.</b> Psyllium, plant sterols, oats, olive oil, fish, nuts, beans, vegetables.</td><td>The food stack cuts LDL by about 20 to 25%. A Mediterranean style diet cut death risk by 23% over 25 years in a study of 25,315 women.</td></tr>
-      <tr><td><b>3</b></td><td><b>Take the supplement stack below.</b></td><td>Cocoa flavanols cut heart death by 27% in adults 60 and up. Fish oil (EPA) shrank the risky part of plaque by 17%. K2 slowed calcium growth by about 21%.</td></tr>
-      <tr><td><b>4</b></td><td><b>Check her blood pressure. Treat toward 130 or less.</b></td><td>Good blood pressure control cut death risk by 27% in the SPRINT trial. This is the most forgotten lever in older women.</td></tr>
-      <tr><td><b>5</b></td><td><b>Take the doctor questions below to her next visit.</b></td><td>Her calcium score decides the statin question. The doctor visit checklist below shows exactly what to ask.</td></tr>
-      <tr><td><b>6</b></td><td><b>Never start on your own:</b> aspirin, big calcium pills, no flush niacin, nattokinase.</td><td>Aspirin for prevention in adults 65 and up caused more bleeding and more deaths in a big trial. See the Safety tab.</td></tr>
+      <tr><th>#</th><th>Power</th><th>Action</th><th>Why (the number)</th></tr>
+      <tr><td><b>1</b></td><td><span class="pw pw10">10</span></td><td><span class="nm"><svg width="18" height="18"><use href="#i-walk"/></svg>Walk every day. Aim for 6,000 to 8,000 steps.</span></td><td><b>12,000 steps vs 4,000 steps cut death risk by 65%</b> in a 10 year study (JAMA, 2020). 8,000 steps cut it by 51%. Even 4,400 steps cut it by 41% in women around age 72. Nothing else on this page comes close.</td></tr>
+      <tr><td><b>2</b></td><td><span class="pw pw9">9</span></td><td><span class="nm"><svg width="18" height="18"><use href="#i-plate"/></svg>Use food, not just pills, for cholesterol.</span> Psyllium, plant sterols, oats, olive oil, fish, nuts, beans, vegetables.</td><td>The food stack cuts LDL by about 20 to 25%. A Mediterranean style diet cut death risk by 23% over 25 years in a study of 25,315 women.</td></tr>
+      <tr><td><b>3</b></td><td><span class="pw pw9">9</span></td><td><span class="nm"><svg width="18" height="18"><use href="#i-gauge"/></svg>Check her blood pressure. Treat toward 130 or less.</span></td><td>Good blood pressure control cut death risk by 27% in the SPRINT trial. This is the most forgotten lever in older women.</td></tr>
+      <tr><td><b>4</b></td><td><span class="pw pw7">7</span></td><td><span class="nm"><svg width="18" height="18"><use href="#i-capsule"/></svg>Take the supplement stack below.</span></td><td>Cocoa flavanols cut heart death by 27% in adults 60 and up. Fish oil (EPA) shrank the risky part of plaque by 17%. K2 slowed calcium growth by about 21%.</td></tr>
+      <tr><td><b>5</b></td><td><span class="pw pw8">8</span></td><td><span class="nm"><svg width="18" height="18"><use href="#i-stetho"/></svg>Take the doctor questions below to her next visit.</span></td><td>Her calcium score decides the statin question. The checklist below shows exactly what to ask.</td></tr>
+      <tr><td><b>6</b></td><td><span class="pw pw6">6</span></td><td><span class="nm"><svg width="18" height="18"><use href="#i-x"/></svg>Never start on your own:</span> aspirin, big calcium pills, no flush niacin, nattokinase.</td><td>Aspirin for prevention in adults 65 and up caused more bleeding and more deaths in a big trial. This score is for avoiding harm, which still counts.</td></tr>
     </table>
   </div>
 
@@ -194,14 +208,14 @@
   <p class="sub">One hard rule: if she takes warfarin (a blood thinner), skip the vitamin K2. Everything else here is low risk.</p>
   <div class="panel">
     <table>
-      <tr><th>Supplement</th><th>Exact form</th><th>Dose</th><th>Max safe</th><th>Why</th></tr>
-      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-cocoa"/></svg>Cocoa flavanols</span></td><td>a standardized cocoa extract pill (not candy bars)</td><td>500 mg</td><td>500 to 900 mg</td><td>Cut heart death by 27% in 21,442 adults age 60 and up. Also helps memory.</td></tr>
-      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-fish"/></svg>Fish oil (EPA)</span></td><td>high EPA oil. The label should show EPA at least double the DHA.</td><td>1 to 2 g EPA</td><td>3 g total without a doctor</td><td>The only supplement that shrinks the risky part of plaque (down 17%).</td></tr>
-      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-capsule"/></svg>Vitamin K2</span></td><td>MK-7 form, from natto</td><td>180 to 360 mcg with a fatty meal</td><td>no known toxic limit. Never with warfarin.</td><td>Calcium in arteries grew about 21% slower in K2 trials.</td></tr>
-      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-sun"/></svg>Vitamin D3</span></td><td>cholecalciferol D3, taken with K2</td><td>2,000 to 5,000 IU. Test her blood. Aim for 40 to 60 ng/mL.</td><td>10,000 IU a day (research backed ceiling)</td><td>Cut cancer death by 15% in study summaries. Take daily, never one giant monthly dose.</td></tr>
-      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-garlic"/></svg>Aged garlic</span></td><td>Aged Garlic Extract, Kyolic type</td><td>1,200 mg (two 600 mg pills)</td><td>2,400 mg</td><td>Slowed calcium buildup in two small trials. Very safe.</td></tr>
-      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-husk"/></svg>Fiber trio</span></td><td>psyllium powder in water, sterol pills, oats or barley</td><td>psyllium 5 g twice, sterols 2 g, oats 3 g</td><td>psyllium 20 g, sterols 2.5 g</td><td>Cuts LDL by about 20 to 25% from food alone.</td></tr>
-      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-bone"/></svg>Creatine</span></td><td>monohydrate powder only</td><td>3 to 5 g, any time</td><td>5 g long term</td><td>Builds muscle and strength in women after menopause. Falls and frailty are quiet killers.</td></tr>
+      <tr><th>Supplement</th><th>Exact form</th><th>Dose</th><th>Max safe</th><th>Power</th><th>Why</th></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-fish"/></svg>Fish oil (EPA)</span></td><td>high EPA oil. The label should show EPA at least double the DHA.</td><td>1 to 2 g EPA</td><td>3 g total without a doctor</td><td><span class="pw pw9">9</span></td><td>The only supplement that shrinks the risky part of plaque (down 17%).</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-cocoa"/></svg>Cocoa flavanols</span></td><td>a standardized cocoa extract pill (not candy bars)</td><td>500 mg</td><td>500 to 900 mg</td><td><span class="pw pw8">8</span></td><td>Cut heart death by 27% in 21,442 adults age 60 and up. Also helps memory.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-capsule"/></svg>Vitamin K2</span></td><td>MK-7 form, from natto</td><td>180 to 360 mcg with a fatty meal</td><td>no known toxic limit. Never with warfarin.</td><td><span class="pw pw6">6</span></td><td>Calcium in arteries grew about 21% slower in K2 trials.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-husk"/></svg>Fiber trio</span></td><td>psyllium powder in water, sterol pills, oats or barley</td><td>psyllium 5 g twice, sterols 2 g, oats 3 g</td><td>psyllium 20 g, sterols 2.5 g</td><td><span class="pw pw6">6</span></td><td>Cuts LDL by about 20 to 25% from food alone.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-garlic"/></svg>Aged garlic</span></td><td>Aged Garlic Extract, Kyolic type</td><td>1,200 mg (two 600 mg pills)</td><td>2,400 mg</td><td><span class="pw pw5">5</span></td><td>Slowed calcium buildup in two small trials. Very safe.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-bone"/></svg>Creatine</span></td><td>monohydrate powder only</td><td>3 to 5 g, any time</td><td>5 g long term</td><td><span class="pw pw5">5</span></td><td>Builds muscle and strength in women after menopause. Falls and frailty are quiet killers.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-sun"/></svg>Vitamin D3</span></td><td>cholecalciferol D3, taken with K2</td><td>2,000 to 5,000 IU. Test her blood. Aim for 40 to 60 ng/mL.</td><td>10,000 IU a day (research backed ceiling)</td><td><span class="pw pw4">4</span></td><td>Cut cancer death by 15% in study summaries. Take daily, never one giant monthly dose.</td></tr>
     </table>
   </div>
 
@@ -209,13 +223,13 @@
   <div class="panel">
     <table>
       <tr><th>Time</th><th>What to do</th></tr>
-      <tr><td><b>Morning, with breakfast</b></td><td>Cocoa pill. Vitamin D3 + K2 (they need fat to absorb). Vitamin D works best with the fattiest meal, so move it to lunch or dinner if that meal has more fat.</td></tr>
-      <tr><td><b>After each meal</b></td><td>A 10 to 15 minute walk. This is the easiest way to collect steps and it helps blood sugar too.</td></tr>
-      <tr><td><b>Lunch or dinner</b></td><td>Fish oil (EPA) with food. Aged garlic with dinner. Plant sterols with the biggest meal.</td></tr>
-      <tr><td><b>Any time</b></td><td>Creatine 5 g stirred into water or soup.</td></tr>
-      <tr><td><b>Two hours away from other pills</b></td><td>Psyllium in a big glass of water. It can block other pills from absorbing.</td></tr>
-      <tr><td><b>Twice a week</b></td><td>Strength work. Sit to stands from a chair, wall pushups, or a band. Two sets of 10. This plus creatine protects her from falls.</td></tr>
-      <tr><td><b>Night, only if sleep is bad</b></td><td>Melatonin 1 to 3 mg, one hour before bed. This is a sleep helper, not a heart pill.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-sun"/></svg>Morning, with breakfast</span></td><td>Cocoa pill. Vitamin D3 + K2 (they need fat to absorb). Vitamin D works best with the fattiest meal, so move it to lunch or dinner if that meal has more fat.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-walk"/></svg>After each meal</span></td><td>A 10 to 15 minute walk. This is the easiest way to collect steps and it helps blood sugar too.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-plate"/></svg>Lunch or dinner</span></td><td>Fish oil (EPA) with food. Aged garlic with dinner. Plant sterols with the biggest meal.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-clock"/></svg>Any time</span></td><td>Creatine 5 g stirred into water or soup.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-husk"/></svg>Two hours from other pills</span></td><td>Psyllium in a big glass of water. It can block other pills from absorbing.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-bone"/></svg>Twice a week</span></td><td>Strength work. Sit to stands from a chair, wall pushups, or a band. Two sets of 10. This plus creatine protects her from falls.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-moon"/></svg>Night, only if sleep is bad</span></td><td>Melatonin 1 to 3 mg, one hour before bed. This is a sleep helper, not a heart pill.</td></tr>
     </table>
   </div>
 
@@ -238,13 +252,13 @@
   <div class="panel">
     <table>
       <tr><th>Test</th><th>How often</th><th>Goal</th></tr>
-      <tr><td><b>Lp(a)</b></td><td>once in her life</td><td>it runs in families. High means the niacin and doctor talks matter more.</td></tr>
-      <tr><td><b>ApoB</b></td><td>each year</td><td>under 65, or under 55 if her risk is very high</td></tr>
-      <tr><td><b>LDL, HDL, triglycerides</b></td><td>each year</td><td>LDL as low as she can safely get. Triglycerides under 150.</td></tr>
-      <tr><td><b>hsCRP (inflammation)</b></td><td>each year</td><td>under 2</td></tr>
-      <tr><td><b>HbA1c (blood sugar)</b></td><td>each year</td><td>under 5.7</td></tr>
-      <tr><td><b>Vitamin D level</b></td><td>at the start, then twice a year on a steady dose</td><td>40 to 60 ng/mL</td></tr>
-      <tr><td><b>Kidney function (eGFR)</b></td><td>before starting magnesium</td><td>normal kidneys clear magnesium safely</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-root"/></svg>Lp(a)</span></td><td>once in her life</td><td>it runs in families. High means the niacin and doctor talks matter more.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-scale"/></svg>ApoB</span></td><td>each year</td><td>under 65, or under 55 if her risk is very high</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-drop"/></svg>LDL, HDL, triglycerides</span></td><td>each year</td><td>LDL as low as she can safely get. Triglycerides under 150.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-flame"/></svg>hsCRP (inflammation)</span></td><td>each year</td><td>under 2</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-vial"/></svg>HbA1c (blood sugar)</span></td><td>each year</td><td>under 5.7</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-sun"/></svg>Vitamin D level</span></td><td>at the start, then twice a year on a steady dose</td><td>40 to 60 ng/mL</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-drop"/></svg>Kidney function (eGFR)</span></td><td>before starting magnesium</td><td>normal kidneys clear magnesium safely</td></tr>
     </table>
   </div>
 
@@ -286,12 +300,12 @@
     <p class="note">These were considered and set aside. Either the trials failed, or the proof was too thin to spend her money on.</p>
     <table>
       <tr><th>Set aside</th><th>Why</th></tr>
-      <tr><td>Nattokinase</td><td>Its own controlled trial failed to slow plaque.</td></tr>
-      <tr><td>Policosanol</td><td>Trial results outside one research group are poor.</td></tr>
-      <tr><td>Resveratrol</td><td>Human trials never matched the hype.</td></tr>
-      <tr><td>Guggul</td><td>Mixed results, and it can upset the stomach.</td></tr>
-      <tr><td>Hawthorn, taurine, olive leaf</td><td>Too little good human data for heart plaque.</td></tr>
-      <tr><td>Curcumin (for cholesterol)</td><td>Cuts LDL only about 4 points. Not worth it for this goal.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-x"/></svg>Nattokinase</span></td><td>Its own controlled trial failed to slow plaque.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-x"/></svg>Policosanol</span></td><td>Trial results outside one research group are poor.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-x"/></svg>Resveratrol</span></td><td>Human trials never matched the hype.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-x"/></svg>Guggul</span></td><td>Mixed results, and it can upset the stomach.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-x"/></svg>Hawthorn, taurine, olive leaf</span></td><td>Too little good human data for heart plaque.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-x"/></svg>Curcumin (for cholesterol)</span></td><td>Cuts LDL only about 4 points. Not worth it for this goal.</td></tr>
     </table>
   </div>
 </section>
@@ -325,6 +339,7 @@
   </div>
 
   <h2><svg width="26" height="26"><use href="#i-capsule"/></svg> The Full List With Max Safe Doses</h2>
+  <div class="pw-legend"><svg width="16" height="16" style="color:var(--muted)"><use href="#i-bolt"/></svg><b>Power score</b>: how much it moves her risk. <span class="pw pw10">9-10</span> huge <span class="pw pw8">7-8</span> strong <span class="pw pw6">5-6</span> solid <span class="pw pw4">3-4</span> small <span class="pw pw2">1-2</span> tiny</div>
   <div class="legend">
     <span class="tag t1">Tier 1: proof from plaque or calcium trials</span>
     <span class="tag t2">Tier 2: strong cholesterol proof</span>
@@ -333,31 +348,31 @@
     <span class="doc">DOCTOR = do not go higher without a doctor</span>
   </div>
   <table>
-    <tr><th>Supplement</th><th>Form to buy</th><th>Daily dose</th><th>Max without doctor</th><th>What it does</th><th>Tier</th></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-fish"/></svg>EPA fish oil</span></td><td>high EPA (EPA at least double DHA)</td><td>1 to 2 g EPA</td><td>3 g total <span class="doc">4 g Rx</span></td><td>soft plaque down 17%, events down 25% at the 4 g Rx dose</td><td><span class="tag t1">1</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-capsule"/></svg>Vitamin K2</span></td><td>MK-7 from natto</td><td>180 to 360 mcg with fat</td><td>no ceiling known, never with warfarin</td><td>calcium growth about 21% slower</td><td><span class="tag t1">1</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-pill"/></svg>Niacin</span></td><td>immediate release nicotinic acid, the flushing kind. An 81 mg aspirin 30 minutes before cuts the flush.</td><td>start 250 to 500 mg with dinner</td><td>500 mg <span class="doc">2 g Rx</span></td><td>HDL up 15 to 35%, Lp(a) down 23 to 31%, triglycerides down 20 to 50%</td><td><span class="tag t1">1</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-garlic"/></svg>Aged garlic</span></td><td>Aged Garlic Extract, SAC standardized</td><td>1,200 mg</td><td>2,400 mg</td><td>calcium growth slowed</td><td><span class="tag t1">1</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-cocoa"/></svg>Cocoa flavanols</span></td><td>standardized extract pill, tested for metals</td><td>500 mg flavanols</td><td>about 900 mg</td><td>heart death down 27% in adults 60+</td><td><span class="tag t1">1</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-root"/></svg>Berberine</span></td><td>berberine HCl</td><td>500 mg twice with meals</td><td>1,500 mg (stomach cramps above)</td><td>LDL down 15 to 25%</td><td><span class="tag t2">2</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-rice"/></svg>Red yeast rice</span></td><td>certified monacolin K content, citrinin free</td><td>3 to 10 mg monacolin K</td><td>10 mg (this equals a low dose statin)</td><td>LDL down 15 to 25%. Never with a statin pill.</td><td><span class="tag t2">2</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-citrus"/></svg>Bergamot</span></td><td>bergamot polyphenol fraction</td><td>500 to 1,000 mg</td><td>1,500 mg</td><td>LDL down 8 to 28%</td><td><span class="tag t2">2</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-leaf"/></svg>Plant sterols</span></td><td>sterol or stanol pills or spreads</td><td>2 g with meals</td><td>2.5 g (more adds nothing)</td><td>LDL down 9 to 10%</td><td><span class="tag t2">2</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-husk"/></svg>Psyllium</span></td><td>husk powder in water</td><td>5 g twice, lots of water</td><td>about 20 g</td><td>LDL down 6 to 8%</td><td><span class="tag t2">2</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-sun"/></svg>Vitamin D3</span></td><td>cholecalciferol with K2</td><td>2,000 to 5,000 IU, test blood, aim 40 to 60 ng/mL</td><td>10,000 IU daily</td><td>cancer death down 15%, bone and muscle support</td><td><span class="tag t2b">2B</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-bone"/></svg>Creatine</span></td><td>monohydrate only</td><td>3 to 5 g any time</td><td>5 g</td><td>muscle and strength in older women</td><td><span class="tag t2b">2B</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-pill"/></svg>CoQ10</span></td><td>ubiquinol, or ubiquinone with fat</td><td>100 to 200 mg with fat</td><td>300 mg <span class="doc">heart failure dose</span></td><td>in heart failure, death 9% vs 17%. Also statin muscle aches.</td><td><span class="tag t2b">2B</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-drop"/></svg>Magnesium</span></td><td>glycinate or citrate, not oxide</td><td>200 to 350 mg</td><td>350 mg</td><td>small blood pressure help, fixes low intake</td><td><span class="tag t2b">2B</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-spiral"/></svg>Spirulina</span></td><td>third party tested for metals</td><td>1 to 3 g</td><td>8 g studied</td><td>LDL down 5 to 15%</td><td><span class="tag t2b">2B</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-leaf"/></svg>Amla</span></td><td>standardized Indian gooseberry extract</td><td>500 to 1,000 mg</td><td>1,000 mg</td><td>LDL down 10 to 20%</td><td><span class="tag t2b">2B</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-yogurt"/></svg>Probiotic</span></td><td>Lactobacillus reuteri NCIMB 30242, the studied strain</td><td>label dose</td><td>label</td><td>LDL down 9 to 12%</td><td><span class="tag t2b">2B</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-capsule"/></svg>Pantethine</span></td><td>pantethine, a B5 form</td><td>600 to 900 mg</td><td>900 mg</td><td>LDL down 6 to 11%</td><td><span class="tag t2b">2B</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-seed"/></svg>Black seed</span></td><td>cold pressed Nigella oil</td><td>1 to 2 g</td><td>2 to 3 g</td><td>LDL down 5 to 8%</td><td><span class="tag t2b">2B</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-oat"/></svg>Oat beta glucan</span></td><td>oats or barley food</td><td>3 g</td><td>plateau at 3 g</td><td>LDL down 5 to 8%. The only one with an official FDA heart claim.</td><td><span class="tag t2b">2B</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-soy"/></svg>Soy protein</span></td><td>soy food or powder</td><td>25 g</td><td>food amount</td><td>LDL down 3 to 4%</td><td><span class="tag t2b">2B</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-tea"/></svg>Green tea</span></td><td>brewed tea is safest, or extract</td><td>3 to 5 cups, or up to 500 mg EGCG</td><td>800 mg EGCG (EU liver safety line)</td><td>LDL down 4 to 6%</td><td><span class="tag t2b">2B</span></td></tr>
-    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-moon"/></svg>Melatonin</span></td><td>USP verified, low dose</td><td>0.5 to 3 mg, an hour before bed</td><td>5 mg</td><td>sleep only. Falls asleep about 8 minutes faster. Not a heart pill.</td><td><span class="tag t3">3</span></td></tr>
-    <tr><td><span class="nm">Curcumin, nattokinase, no flush niacin, policosanol, tocotrienols</span></td><td>not applicable</td><td>not applicable</td><td>not applicable</td><td>weak or failed trials</td><td><span class="tag t3">3</span></td></tr>
+    <tr><th>Supplement</th><th>Form to buy</th><th>Daily dose</th><th>Max without doctor</th><th>What it does</th><th>Tier</th><th>Power</th></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-fish"/></svg>EPA fish oil</span></td><td>high EPA (EPA at least double DHA)</td><td>1 to 2 g EPA</td><td>3 g total <span class="doc">4 g Rx</span></td><td>soft plaque down 17%, events down 25% at the 4 g Rx dose</td><td><span class="tag t1">1</span></td><td><span class="pw pw9">9</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-cocoa"/></svg>Cocoa flavanols</span></td><td>standardized extract pill, tested for metals</td><td>500 mg flavanols</td><td>about 900 mg</td><td>heart death down 27% in adults 60+</td><td><span class="tag t1">1</span></td><td><span class="pw pw8">8</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-pill"/></svg>Niacin</span></td><td>immediate release nicotinic acid, the flushing kind. An 81 mg aspirin 30 minutes before cuts the flush.</td><td>start 250 to 500 mg with dinner</td><td>500 mg <span class="doc">2 g Rx</span></td><td>HDL up 15 to 35%, Lp(a) down 23 to 31%, triglycerides down 20 to 50%</td><td><span class="tag t1">1</span></td><td><span class="pw pw7">7</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-capsule"/></svg>Vitamin K2</span></td><td>MK-7 from natto</td><td>180 to 360 mcg with fat</td><td>no ceiling known, never with warfarin</td><td>calcium growth about 21% slower</td><td><span class="tag t1">1</span></td><td><span class="pw pw6">6</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-garlic"/></svg>Aged garlic</span></td><td>Aged Garlic Extract, SAC standardized</td><td>1,200 mg</td><td>2,400 mg</td><td>calcium growth slowed</td><td><span class="tag t1">1</span></td><td><span class="pw pw5">5</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-root"/></svg>Berberine</span></td><td>berberine HCl</td><td>500 mg twice with meals</td><td>1,500 mg (stomach cramps above)</td><td>LDL down 15 to 25%</td><td><span class="tag t2">2</span></td><td><span class="pw pw6">6</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-rice"/></svg>Red yeast rice</span></td><td>certified monacolin K content, citrinin free</td><td>3 to 10 mg monacolin K</td><td>10 mg (this equals a low dose statin)</td><td>LDL down 15 to 25%. Never with a statin pill.</td><td><span class="tag t2">2</span></td><td><span class="pw pw6">6</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-citrus"/></svg>Bergamot</span></td><td>bergamot polyphenol fraction</td><td>500 to 1,000 mg</td><td>1,500 mg</td><td>LDL down 8 to 28%</td><td><span class="tag t2">2</span></td><td><span class="pw pw5">5</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-leaf"/></svg>Plant sterols</span></td><td>sterol or stanol pills or spreads</td><td>2 g with meals</td><td>2.5 g (more adds nothing)</td><td>LDL down 9 to 10%</td><td><span class="tag t2">2</span></td><td><span class="pw pw5">5</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-husk"/></svg>Psyllium</span></td><td>husk powder in water</td><td>5 g twice, lots of water</td><td>about 20 g</td><td>LDL down 6 to 8%</td><td><span class="tag t2">2</span></td><td><span class="pw pw5">5</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-sun"/></svg>Vitamin D3</span></td><td>cholecalciferol with K2</td><td>2,000 to 5,000 IU, test blood, aim 40 to 60 ng/mL</td><td>10,000 IU daily</td><td>cancer death down 15%, bone and muscle support</td><td><span class="tag t2b">2B</span></td><td><span class="pw pw4">4</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-bone"/></svg>Creatine</span></td><td>monohydrate only</td><td>3 to 5 g any time</td><td>5 g</td><td>muscle and strength in older women</td><td><span class="tag t2b">2B</span></td><td><span class="pw pw5">5</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-pill"/></svg>CoQ10</span></td><td>ubiquinol, or ubiquinone with fat</td><td>100 to 200 mg with fat</td><td>300 mg <span class="doc">heart failure dose</span></td><td>in heart failure, death 9% vs 17%. Also statin muscle aches.</td><td><span class="tag t2b">2B</span></td><td><span class="pw pw4">4</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-oat"/></svg>Oat beta glucan</span></td><td>oats or barley food</td><td>3 g</td><td>plateau at 3 g</td><td>LDL down 5 to 8%. The only one with an official FDA heart claim.</td><td><span class="tag t2b">2B</span></td><td><span class="pw pw5">5</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-yogurt"/></svg>Probiotic</span></td><td>Lactobacillus reuteri NCIMB 30242, the studied strain</td><td>label dose</td><td>label</td><td>LDL down 9 to 12%</td><td><span class="tag t2b">2B</span></td><td><span class="pw pw4">4</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-drop"/></svg>Magnesium</span></td><td>glycinate or citrate, not oxide</td><td>200 to 350 mg</td><td>350 mg</td><td>small blood pressure help, fixes low intake</td><td><span class="tag t2b">2B</span></td><td><span class="pw pw3">3</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-spiral"/></svg>Spirulina</span></td><td>third party tested for metals</td><td>1 to 3 g</td><td>8 g studied</td><td>LDL down 5 to 15%</td><td><span class="tag t2b">2B</span></td><td><span class="pw pw3">3</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-leaf"/></svg>Amla</span></td><td>standardized Indian gooseberry extract</td><td>500 to 1,000 mg</td><td>1,000 mg</td><td>LDL down 10 to 20%</td><td><span class="tag t2b">2B</span></td><td><span class="pw pw3">3</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-capsule"/></svg>Pantethine</span></td><td>pantethine, a B5 form</td><td>600 to 900 mg</td><td>900 mg</td><td>LDL down 6 to 11%</td><td><span class="tag t2b">2B</span></td><td><span class="pw pw3">3</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-seed"/></svg>Black seed</span></td><td>cold pressed Nigella oil</td><td>1 to 2 g</td><td>2 to 3 g</td><td>LDL down 5 to 8%</td><td><span class="tag t2b">2B</span></td><td><span class="pw pw3">3</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-tea"/></svg>Green tea</span></td><td>brewed tea is safest, or extract</td><td>3 to 5 cups, or up to 500 mg EGCG</td><td>800 mg EGCG (EU liver safety line)</td><td>LDL down 4 to 6%</td><td><span class="tag t2b">2B</span></td><td><span class="pw pw3">3</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-soy"/></svg>Soy protein</span></td><td>soy food or powder</td><td>25 g</td><td>food amount</td><td>LDL down 3 to 4%</td><td><span class="tag t2b">2B</span></td><td><span class="pw pw2">2</span></td></tr>
+    <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-moon"/></svg>Melatonin</span></td><td>USP verified, low dose</td><td>0.5 to 3 mg, an hour before bed</td><td>5 mg</td><td>sleep only. Falls asleep about 8 minutes faster. Not a heart pill.</td><td><span class="tag t3">3</span></td><td><span class="pw pw1">1</span></td></tr>
+    <tr><td><span class="nm">Curcumin, nattokinase, no flush niacin, policosanol, tocotrienols</span></td><td>not applicable</td><td>not applicable</td><td>not applicable</td><td>weak or failed trials</td><td><span class="tag t3">3</span></td><td><span class="pw pw1">1</span></td></tr>
   </table>
 </section>
 
@@ -399,55 +414,55 @@
 
   <h2><svg width="26" height="26"><use href="#i-chart"/></svg> LDL: The Big Hitters</h2>
   <div class="panel">
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-plate"/></svg>Portfolio style diet</span><div class="bar-track"><div class="bar-fill down" style="width:60%"></div></div><span class="bar-val down-c">down 13 to 30%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-rice"/></svg>Red yeast rice</span><div class="bar-track"><div class="bar-fill down" style="width:50%"></div></div><span class="bar-val down-c">down 15 to 25%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-root"/></svg>Berberine</span><div class="bar-track"><div class="bar-fill down" style="width:50%"></div></div><span class="bar-val down-c">down 15 to 25%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-pill"/></svg>Niacin</span><div class="bar-track"><div class="bar-fill down" style="width:50%"></div></div><span class="bar-val down-c">down 10 to 25%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-citrus"/></svg>Bergamot</span><div class="bar-track"><div class="bar-fill down" style="width:56%"></div></div><span class="bar-val down-c">down 8 to 28%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-leaf"/></svg>Plant sterols</span><div class="bar-track"><div class="bar-fill down" style="width:20%"></div></div><span class="bar-val down-c">down 9 to 10%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-husk"/></svg>Psyllium</span><div class="bar-track"><div class="bar-fill down" style="width:16%"></div></div><span class="bar-val down-c">down 6 to 8%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-plate"/></svg>Portfolio style diet</span><div class="bar-track"><div class="bar-fill down" style="width:60%"></div></div><span class="bar-val down-c"><span class="pw pw8">8</span>down 13 to 30%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-rice"/></svg>Red yeast rice</span><div class="bar-track"><div class="bar-fill down" style="width:50%"></div></div><span class="bar-val down-c"><span class="pw pw6">6</span>down 15 to 25%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-root"/></svg>Berberine</span><div class="bar-track"><div class="bar-fill down" style="width:50%"></div></div><span class="bar-val down-c"><span class="pw pw6">6</span>down 15 to 25%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-pill"/></svg>Niacin</span><div class="bar-track"><div class="bar-fill down" style="width:50%"></div></div><span class="bar-val down-c"><span class="pw pw6">6</span>down 10 to 25%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-citrus"/></svg>Bergamot</span><div class="bar-track"><div class="bar-fill down" style="width:56%"></div></div><span class="bar-val down-c"><span class="pw pw5">5</span>down 8 to 28%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-leaf"/></svg>Plant sterols</span><div class="bar-track"><div class="bar-fill down" style="width:20%"></div></div><span class="bar-val down-c"><span class="pw pw5">5</span>down 9 to 10%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-husk"/></svg>Psyllium</span><div class="bar-track"><div class="bar-fill down" style="width:16%"></div></div><span class="bar-val down-c"><span class="pw pw5">5</span>down 6 to 8%</span></div>
   </div>
 
   <h2><svg width="26" height="26"><use href="#i-chart"/></svg> LDL: The Farm Team</h2>
   <div class="panel">
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-leaf"/></svg>Amla</span><div class="bar-track"><div class="bar-fill down" style="width:30%"></div></div><span class="bar-val down-c">down 10 to 20%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-spiral"/></svg>Spirulina</span><div class="bar-track"><div class="bar-fill down" style="width:30%"></div></div><span class="bar-val down-c">down 5 to 15%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-artichoke"/></svg>Artichoke</span><div class="bar-track"><div class="bar-fill down" style="width:30%"></div></div><span class="bar-val down-c">down 5 to 15%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-yogurt"/></svg>Probiotic</span><div class="bar-track"><div class="bar-fill down" style="width:24%"></div></div><span class="bar-val down-c">down 9 to 12%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-capsule"/></svg>Pantethine</span><div class="bar-track"><div class="bar-fill down" style="width:22%"></div></div><span class="bar-val down-c">down 6 to 11%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-seed"/></svg>Black seed</span><div class="bar-track"><div class="bar-fill down" style="width:16%"></div></div><span class="bar-val down-c">down 5 to 8%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-oat"/></svg>Oat beta glucan</span><div class="bar-track"><div class="bar-fill down" style="width:16%"></div></div><span class="bar-val down-c">down 5 to 8%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-tea"/></svg>Green tea</span><div class="bar-track"><div class="bar-fill down" style="width:12%"></div></div><span class="bar-val down-c">down 4 to 6%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-soy"/></svg>Soy protein</span><div class="bar-track"><div class="bar-fill down" style="width:8%"></div></div><span class="bar-val down-c">down 3 to 4%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-leaf"/></svg>Amla</span><div class="bar-track"><div class="bar-fill down" style="width:30%"></div></div><span class="bar-val down-c"><span class="pw pw3">3</span>down 10 to 20%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-spiral"/></svg>Spirulina</span><div class="bar-track"><div class="bar-fill down" style="width:30%"></div></div><span class="bar-val down-c"><span class="pw pw3">3</span>down 5 to 15%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-artichoke"/></svg>Artichoke</span><div class="bar-track"><div class="bar-fill down" style="width:30%"></div></div><span class="bar-val down-c"><span class="pw pw3">3</span>down 5 to 15%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-yogurt"/></svg>Probiotic</span><div class="bar-track"><div class="bar-fill down" style="width:24%"></div></div><span class="bar-val down-c"><span class="pw pw4">4</span>down 9 to 12%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-capsule"/></svg>Pantethine</span><div class="bar-track"><div class="bar-fill down" style="width:22%"></div></div><span class="bar-val down-c"><span class="pw pw3">3</span>down 6 to 11%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-oat"/></svg>Oat beta glucan</span><div class="bar-track"><div class="bar-fill down" style="width:16%"></div></div><span class="bar-val down-c"><span class="pw pw5">5</span>down 5 to 8%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-seed"/></svg>Black seed</span><div class="bar-track"><div class="bar-fill down" style="width:16%"></div></div><span class="bar-val down-c"><span class="pw pw3">3</span>down 5 to 8%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-tea"/></svg>Green tea</span><div class="bar-track"><div class="bar-fill down" style="width:12%"></div></div><span class="bar-val down-c"><span class="pw pw3">3</span>down 4 to 6%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-soy"/></svg>Soy protein</span><div class="bar-track"><div class="bar-fill down" style="width:8%"></div></div><span class="bar-val down-c"><span class="pw pw2">2</span>down 3 to 4%</span></div>
   </div>
 
   <h2><svg width="26" height="26"><use href="#i-heart"/></svg> Plaque and Calcium</h2>
   <div class="panel">
     <h3>Soft plaque (the kind that bursts)</h3>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-fish"/></svg>EPA 4 g prescription</span><div class="bar-track"><div class="bar-fill down" style="width:34%"></div></div><span class="bar-val down-c">down 17%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-pill"/></svg>Niacin plus statin</span><div class="bar-track"><div class="bar-fill down" style="width:12%"></div></div><span class="bar-val down-c">shrank in small studies</span></div>
-    <h3 style="margin-top:16px;">Calcium growth (slowing it)</h3>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-capsule"/></svg>K2 MK-7</span><div class="bar-track"><div class="bar-fill down" style="width:42%"></div></div><span class="bar-val down-c">about 21% slower</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-garlic"/></svg>Aged garlic</span><div class="bar-track"><div class="bar-fill down" style="width:15%"></div></div><span class="bar-val down-c">slowed, small trials</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-fish"/></svg>EPA 4 g prescription</span><div class="bar-track"><div class="bar-fill down" style="width:34%"></div></div><span class="bar-val down-c"><span class="pw pw9">9</span>down 17%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-pill"/></svg>Niacin plus statin</span><div class="bar-track"><div class="bar-fill down" style="width:12%"></div></div><span class="bar-val down-c"><span class="pw pw4">4</span>shrank in small studies</span></div>
+    <h3 style="margin-top:var(--s4);">Calcium growth (slowing it)</h3>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-capsule"/></svg>K2 MK-7</span><div class="bar-track"><div class="bar-fill down" style="width:42%"></div></div><span class="bar-val down-c"><span class="pw pw6">6</span>about 21% slower</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-garlic"/></svg>Aged garlic</span><div class="bar-track"><div class="bar-fill down" style="width:15%"></div></div><span class="bar-val down-c"><span class="pw pw5">5</span>slowed, small trials</span></div>
   </div>
 
   <h2><svg width="26" height="26"><use href="#i-scale"/></svg> HDL (Good Cholesterol)</h2>
   <p class="sub">Raise it with exercise, quitting smoking, and food. Raising the number with pills has never saved lives in trials.</p>
   <div class="panel">
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-pill"/></svg>Niacin</span><div class="bar-track"><div class="bar-fill up" style="width:70%"></div></div><span class="bar-val up-c">up 15 to 35%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-x"/></svg>Quitting smoking</span><div class="bar-track"><div class="bar-fill up" style="width:20%"></div></div><span class="bar-val up-c">up 5 to 10%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-walk"/></svg>Exercise (long sessions)</span><div class="bar-track"><div class="bar-fill up" style="width:18%"></div></div><span class="bar-val up-c">up 5 to 12%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-fish"/></svg>Omega-3</span><div class="bar-track"><div class="bar-fill up" style="width:10%"></div></div><span class="bar-val up-c">up 3 to 5%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-x"/></svg>Quitting smoking</span><div class="bar-track"><div class="bar-fill up" style="width:20%"></div></div><span class="bar-val up-c"><span class="pw pw7">7</span>up 5 to 10%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-walk"/></svg>Exercise (long sessions)</span><div class="bar-track"><div class="bar-fill up" style="width:18%"></div></div><span class="bar-val up-c"><span class="pw pw6">6</span>up 5 to 12%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-pill"/></svg>Niacin</span><div class="bar-track"><div class="bar-fill up" style="width:70%"></div></div><span class="bar-val up-c"><span class="pw pw5">5</span>up 15 to 35%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-fish"/></svg>Omega-3</span><div class="bar-track"><div class="bar-fill up" style="width:10%"></div></div><span class="bar-val up-c"><span class="pw pw3">3</span>up 3 to 5%</span></div>
   </div>
 
   <h2><svg width="26" height="26"><use href="#i-walk"/></svg> Steps: The Cheapest Medicine Here</h2>
   <div class="panel">
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-walk"/></svg>Each 1,000 more steps</span><div class="bar-track"><div class="bar-fill down" style="width:23%"></div></div><span class="bar-val down-c">death down 15%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-walk"/></svg>4,400 steps (women near 72)</span><div class="bar-track"><div class="bar-fill down" style="width:62%"></div></div><span class="bar-val down-c">death down 41%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-walk"/></svg>8,000 vs 4,000 steps</span><div class="bar-track"><div class="bar-fill down" style="width:77%"></div></div><span class="bar-val down-c">death down 51%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-walk"/></svg>12,000 vs 4,000 steps</span><div class="bar-track"><div class="bar-fill down" style="width:98%"></div></div><span class="bar-val down-c">death down 65%</span></div>
-    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-clock"/></svg>A 15 minute daily walk</span><div class="bar-track"><div class="bar-fill down" style="width:21%"></div></div><span class="bar-val down-c">death down 14%</span></div>
-    <p class="note" style="margin-top:10px;">At age 60 and up, the curve flattens near 6,000 to 8,000 steps. That is the full benefit.</p>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-walk"/></svg>12,000 vs 4,000 steps</span><div class="bar-track"><div class="bar-fill down" style="width:98%"></div></div><span class="bar-val down-c"><span class="pw pw10">10</span>death down 65%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-walk"/></svg>8,000 vs 4,000 steps</span><div class="bar-track"><div class="bar-fill down" style="width:77%"></div></div><span class="bar-val down-c"><span class="pw pw9">9</span>death down 51%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-walk"/></svg>4,400 steps (women near 72)</span><div class="bar-track"><div class="bar-fill down" style="width:62%"></div></div><span class="bar-val down-c"><span class="pw pw8">8</span>death down 41%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-target"/></svg>Each 1,000 more steps</span><div class="bar-track"><div class="bar-fill down" style="width:23%"></div></div><span class="bar-val down-c"><span class="pw pw6">6</span>death down 15%</span></div>
+    <div class="bar-row"><span class="bar-label"><svg width="18" height="18"><use href="#i-clock"/></svg>A 15 minute daily walk</span><div class="bar-track"><div class="bar-fill down" style="width:21%"></div></div><span class="bar-val down-c"><span class="pw pw6">6</span>death down 14%</span></div>
+    <p class="note" style="margin-top:var(--s2);">At age 60 and up, the curve flattens near 6,000 to 8,000 steps. That is the full benefit.</p>
   </div>
 
   <h2><svg width="26" height="26"><use href="#i-gauge"/></svg> Blood Pressure: The Forgotten Lever</h2>
@@ -477,20 +492,21 @@
 <section class="tab" id="mortality">
   <h2><svg width="26" height="26"><use href="#i-shield"/></svg> What Actually Keeps You Alive</h2>
   <p class="sub">Ranked by one thing only: fewer deaths from any cause. For women 65 and up, heart disease is the number one cause of death (about 24% of deaths, vs cancer at about 20%).</p>
+  <div class="pw-legend"><svg width="16" height="16" style="color:var(--muted)"><use href="#i-bolt"/></svg><b>Power score</b>: impact on death risk. <span class="pw pw10">9-10</span> huge <span class="pw pw8">7-8</span> strong <span class="pw pw6">5-6</span> solid <span class="pw pw4">3-4</span> small</div>
   <div class="panel">
     <table>
-      <tr><th>Lever</th><th>Effect on death</th><th>Evidence</th></tr>
-      <tr><td><b>Fitness (each extra MET)</b></td><td>death down 13%</td><td>Kodama 2009, JAMA, over 100,000 people</td></tr>
-      <tr><td><b>Walking (each 1,000 steps)</b></td><td>death down 15% per 1,000 steps</td><td>Banach 2023, 226,889 people</td></tr>
-      <tr><td><b>Quitting smoking</b></td><td>adds back about 9 to 10 years</td><td>50 year British doctors study</td></tr>
-      <tr><td><b>Blood pressure under 120</b></td><td>death down 27%</td><td>SPRINT trial, 9,361 people</td></tr>
-      <tr><td><b>Mediterranean diet</b></td><td>death down 23% over 25 years</td><td>JAMA 2024, 25,315 women</td></tr>
-      <tr><td><b>Cocoa flavanols 500 mg</b></td><td>heart death down 27%</td><td>COSMOS trial, 21,442 adults 60+</td></tr>
-      <tr><td><b>LDL drug per 39 mg/dL drop</b></td><td>events down 22%, death down 10%</td><td>CTT, 170,000+ patients</td></tr>
-      <tr><td><b>EPA 4 g (high triglycerides)</b></td><td>events down 25%, heart death down 20%</td><td>REDUCE-IT, 8,179 people</td></tr>
-      <tr><td><b>CoQ10, if heart failure</b></td><td>death 9% vs 17%</td><td>Q-SYMBIO trial</td></tr>
-      <tr><td><b>Vitamin D3, if low</b></td><td>cancer death down 15%</td><td>VITAL plus summaries</td></tr>
-      <tr><td><b>Sleep 7 to 9 hours, friends, vaccines, screenings</b></td><td>each one lowers death risk on its own</td><td>large long term studies</td></tr>
+      <tr><th>Lever</th><th>Power</th><th>Effect on death</th><th>Evidence</th></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-walk"/></svg>Fitness (each extra MET)</span></td><td><span class="pw pw10">10</span></td><td>death down 13%</td><td>Kodama 2009, JAMA, over 100,000 people</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-smoke"/></svg>Quitting smoking</span></td><td><span class="pw pw10">10</span></td><td>adds back about 9 to 10 years</td><td>50 year British doctors study</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-gauge"/></svg>Blood pressure under 120</span></td><td><span class="pw pw9">9</span></td><td>death down 27%</td><td>SPRINT trial, 9,361 people</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-target"/></svg>Walking (each 1,000 steps)</span></td><td><span class="pw pw8">8</span></td><td>death down 15% per 1,000 steps</td><td>Banach 2023, 226,889 people</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-plate"/></svg>Mediterranean diet</span></td><td><span class="pw pw8">8</span></td><td>death down 23% over 25 years</td><td>JAMA 2024, 25,315 women</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-pill"/></svg>LDL drug per 39 mg/dL drop</span></td><td><span class="pw pw8">8</span></td><td>events down 22%, death down 10%</td><td>CTT, 170,000+ patients</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-fish"/></svg>EPA 4 g (high triglycerides)</span></td><td><span class="pw pw8">8</span></td><td>events down 25%, heart death down 20%</td><td>REDUCE-IT, 8,179 people</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-cocoa"/></svg>Cocoa flavanols 500 mg</span></td><td><span class="pw pw7">7</span></td><td>heart death down 27%</td><td>COSMOS trial, 21,442 adults 60+</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-capsule"/></svg>CoQ10, if heart failure</span></td><td><span class="pw pw7">7</span></td><td>death 9% vs 17%</td><td>Q-SYMBIO trial</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-moon"/></svg>Sleep 7 to 9 hours, friends, vaccines, screenings</span></td><td><span class="pw pw6">6</span></td><td>each one lowers death risk on its own</td><td>large long term studies</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-sun"/></svg>Vitamin D3, if low</span></td><td><span class="pw pw4">4</span></td><td>cancer death down 15%</td><td>VITAL plus summaries</td></tr>
     </table>
     <div class="bad-box"><b>The trap:</b> a daily aspirin "just in case" at 65 and up. The ASPREE trial (19,114 people) found more bleeding, more deaths, and no benefit. Only take it if a doctor prescribes it after a heart event.</div>
   </div>
@@ -502,20 +518,20 @@
   <div class="panel">
     <table>
       <tr><th>Item</th><th>Hard rules</th></tr>
-      <tr><td><b>Niacin</b></td><td>Only the flushing kind works. Above 500 mg a day, a doctor should watch blood sugar, liver, and gout. One 81 mg aspirin 30 minutes before stops most flushing.</td></tr>
-      <tr><td><b>Red yeast rice</b></td><td>It is a statin in disguise. Never with a statin pill. Buy brands tested for a toxin called citrinin. Skip grapefruit juice.</td></tr>
-      <tr><td><b>Vitamin K2</b></td><td>Never with warfarin. Otherwise very safe.</td></tr>
-      <tr><td><b>Fish oil above 1 g</b></td><td>Slightly raises the risk of a heart rhythm problem (AFib). More is not better past the listed doses.</td></tr>
-      <tr><td><b>Berberine</b></td><td>Changes how the body handles other drugs. On several medicines, ask a pharmacist first. Not in pregnancy.</td></tr>
-      <tr><td><b>Plant sterols</b></td><td>Not for people with a rare condition called sitosterolemia.</td></tr>
-      <tr><td><b>Psyllium</b></td><td>Two hours away from all other pills. Always in a full glass of water. Dry powder can be a choking risk.</td></tr>
-      <tr><td><b>Green tea extract</b></td><td>Stay under 800 mg of EGCG a day from pills. Brewed tea is the safe form.</td></tr>
-      <tr><td><b>Spirulina</b></td><td>Only third party tested brands. Pond grown algae can carry metals.</td></tr>
-      <tr><td><b>Vitamin D</b></td><td>Daily dosing only. 2,000 to 5,000 IU suits most older women. Up to 10,000 IU is the research backed ceiling. Test her blood rather than guessing. Never a giant once a month or once a year dose: that backfired in older women (more falls, no benefit).</td></tr>
-      <tr><td><b>Magnesium</b></td><td>Not with serious kidney disease. Glycinate or citrate are gentle. Oxide is mostly a laxative.</td></tr>
-      <tr><td><b>Melatonin</b></td><td>Buy USP verified brands. Keep to 3 mg or less most nights.</td></tr>
-      <tr><td><b>Calcium pills</b></td><td>Skip big calcium pills. Get calcium from food, plus D3, K2, and strength work.</td></tr>
-      <tr><td><b>Aspirin</b></td><td>Not a self prescribed prevention pill at 65 and up. Doctor decision only.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-pill"/></svg>Niacin</span></td><td>Only the flushing kind works. Above 500 mg a day, a doctor should watch blood sugar, liver, and gout. One 81 mg aspirin 30 minutes before stops most flushing.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-rice"/></svg>Red yeast rice</span></td><td>It is a statin in disguise. Never with a statin pill. Buy brands tested for a toxin called citrinin. Skip grapefruit juice.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-capsule"/></svg>Vitamin K2</span></td><td>Never with warfarin. Otherwise very safe.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-fish"/></svg>Fish oil above 1 g</span></td><td>Slightly raises the risk of a heart rhythm problem (AFib). More is not better past the listed doses.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-root"/></svg>Berberine</span></td><td>Changes how the body handles other drugs. On several medicines, ask a pharmacist first. Not in pregnancy.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-leaf"/></svg>Plant sterols</span></td><td>Not for people with a rare condition called sitosterolemia.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-husk"/></svg>Psyllium</span></td><td>Two hours away from all other pills. Always in a full glass of water. Dry powder can be a choking risk.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-tea"/></svg>Green tea extract</span></td><td>Stay under 800 mg of EGCG a day from pills. Brewed tea is the safe form.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-spiral"/></svg>Spirulina</span></td><td>Only third party tested brands. Pond grown algae can carry metals.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-sun"/></svg>Vitamin D</span></td><td>Daily dosing only. 2,000 to 5,000 IU suits most older women. Up to 10,000 IU is the research backed ceiling. Test her blood rather than guessing. Never a giant once a month or once a year dose: that backfired in older women (more falls, no benefit).</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-drop"/></svg>Magnesium</span></td><td>Not with serious kidney disease. Glycinate or citrate are gentle. Oxide is mostly a laxative.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-moon"/></svg>Melatonin</span></td><td>Buy USP verified brands. Keep to 3 mg or less most nights.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-bone"/></svg>Calcium pills</span></td><td>Skip big calcium pills. Get calcium from food, plus D3, K2, and strength work.</td></tr>
+      <tr><td><span class="nm"><svg width="18" height="18"><use href="#i-x"/></svg>Aspirin</span></td><td>Not a self prescribed prevention pill at 65 and up. Doctor decision only.</td></tr>
     </table>
     <div class="warn-box"><b>Get a doctor involved for:</b> niacin above 500 mg, fish oil above 3 g, anything added to prescription drugs, new chest symptoms, and the blood tests listed in the Plan tab.</div>
   </div>
@@ -526,7 +542,7 @@
   <h2><svg width="26" height="26"><use href="#i-book"/></svg> Every Study Behind This Page</h2>
   <p class="sub">Grouped by topic. Pulled straight from the research sessions for this guide.</p>
   <div class="panel">
-    <h3>Steps and walking</h3>
+    <h3><svg width="18" height="18"><use href="#i-walk"/></svg> Steps and walking</h3>
     <ul class="plain">
       <li><b>Saint-Maurice 2020</b> (12,000 vs 4,000 steps: death down 65%; 8,000: down 51%): <a href="https://pubmed.ncbi.nlm.nih.gov/32207799/" target="_blank">PubMed</a>, <a href="https://jamanetwork.com/journals/jama/fullarticle/2763292" target="_blank">JAMA</a>, <a href="https://www.cancer.gov/news-events/press-releases/2020/daily-step-count-mortality" target="_blank">NCI summary</a></li>
       <li><b>Paluch 2022</b> (benefit flattens at 6,000 to 8,000 steps for 60+): <a href="https://pubmed.ncbi.nlm.nih.gov/35247352/" target="_blank">PubMed</a>, <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(21)00302-9/fulltext" target="_blank">Lancet Public Health</a></li>
@@ -535,7 +551,7 @@
     </ul>
   </div>
   <div class="panel">
-    <h3>Fish oil and EPA</h3>
+    <h3><svg width="18" height="18"><use href="#i-fish"/></svg> Fish oil and EPA</h3>
     <ul class="plain">
       <li><b>EVAPORATE</b> (4 g EPA, soft plaque down 17%): <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7654934/" target="_blank">PMC full text</a></li>
       <li><b>REDUCE-IT summary</b> (events down 25%): <a href="https://www.jacc.org/doi/10.1016/S0735-1097(21)02637-1" target="_blank">JACC</a></li>
@@ -544,7 +560,7 @@
     </ul>
   </div>
   <div class="panel">
-    <h3>Vitamin K2, aged garlic, cocoa</h3>
+    <h3><svg width="18" height="18"><use href="#i-capsule"/></svg> Vitamin K2, aged garlic, cocoa</h3>
     <ul class="plain">
       <li><b>MK-7 trial review 2026</b> (calcium growth slowed): <a href="https://www.the-innovation.org/data/article/nutrition/preview/pdf/TIN-2026-0045.pdf" target="_blank">PDF</a>, <a href="https://paddybarrett.substack.com/p/a-supplement-that-slows-coronary" target="_blank">trial write-up</a></li>
       <li><b>Budoff 2006</b> (aged garlic slowed calcium): <a href="https://pubmed.ncbi.nlm.nih.gov/16484554/" target="_blank">PubMed</a>. <b>Budoff 2004</b>: <a href="https://experts.llu.edu/en/publications/inhibiting-progression-of-coronary-calcification-using-aged-garli-2" target="_blank">study page</a>. <b>Ahmadi 2013</b>: <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167527313002428" target="_blank">Int J Cardiol</a></li>
@@ -552,7 +568,7 @@
     </ul>
   </div>
   <div class="panel">
-    <h3>Niacin</h3>
+    <h3><svg width="18" height="18"><use href="#i-pill"/></svg> Niacin</h3>
     <ul class="plain">
       <li><b>Coronary Drug Project, 15 years</b> (death down 11%): <a href="https://pubmed.ncbi.nlm.nih.gov/3782631/" target="_blank">PubMed</a></li>
       <li><b>AIM-HIGH</b>: <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa1107579" target="_blank">NEJM</a>. <b>HPS2-THRIVE</b>: <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa1300955" target="_blank">NEJM</a></li>
@@ -561,7 +577,7 @@
     </ul>
   </div>
   <div class="panel">
-    <h3>Vitamin D</h3>
+    <h3><svg width="18" height="18"><use href="#i-sun"/></svg> Vitamin D</h3>
     <ul class="plain">
       <li><b>Hathcock 2007</b> (10,000 IU a day is the safe ceiling): <a href="https://pubmed.ncbi.nlm.nih.gov/17209171/" target="_blank">PubMed</a></li>
       <li><b>Heaney 2003</b> (10,000 IU for 20 weeks, blood 64 ng/mL, zero high calcium): <a href="https://pubmed.ncbi.nlm.nih.gov/12499343/" target="_blank">PubMed</a></li>
@@ -572,7 +588,7 @@
     </ul>
   </div>
   <div class="panel">
-    <h3>LDL supplements</h3>
+    <h3><svg width="18" height="18"><use href="#i-leaf"/></svg> LDL supplements</h3>
     <ul class="plain">
       <li><b>Red yeast rice summary</b> (LDL down 39 mg/dL): <a href="https://www.atherosclerosis-journal.com/article/S0021-9150(15)00222-1/fulltext" target="_blank">Atherosclerosis</a>, <a href="https://www.jacc.org/doi/10.1016/j.jacc.2020.11.056" target="_blank">JACC</a></li>
       <li><b>Berberine</b>: <a href="https://www.mdpi.com/2072-6643/12/5/1440" target="_blank">mechanism review</a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5871262/" target="_blank">meta</a></li>
@@ -584,7 +600,7 @@
     </ul>
   </div>
   <div class="panel">
-    <h3>Drugs and mortality trials</h3>
+    <h3><svg width="18" height="18"><use href="#i-shield"/></svg> Drugs and mortality trials</h3>
     <ul class="plain">
       <li><b>Statins, the no benefit side</b>: <a href="https://pubmed.ncbi.nlm.nih.gov/20585067/" target="_blank">Ray 2010</a>, <a href="https://thennt.com/nnt/statins-for-heart-disease-prevention-without-prior-heart-disease/" target="_blank">NNT analysis</a></li>
       <li><b>Statins, the benefit side</b>: <a href="https://jamanetwork.com/journals/jama/fullarticle/2795522" target="_blank">USPSTF 2022</a>, <b>Mortensen and Falk 2018</b> (the calcium score tiebreaker): <a href="https://pubmed.ncbi.nlm.nih.gov/29301631/" target="_blank">PubMed</a></li>
@@ -600,7 +616,7 @@
 </section>
 
 <footer>
-  Built from the research sessions behind this guide (meta analyses and trials: steps studies, EVAPORATE, REDUCE-IT, COSMOS, SPRINT, ASPREE, VITAL, CTT, Ray 2010, Mortensen 2018, Budoff garlic trials, MK-7 trials, and the supplement metas listed in the Studies tab). Ranges show what trials measured. Real results depend on her starting numbers, the dose, and staying consistent. This guide is information, not medical advice. Doses above 500 mg of niacin, fish oil above 3 g, or anything combined with prescription drugs need a doctor in the loop.
+  Built from the research sessions behind this guide (meta analyses and trials: steps studies, EVAPORATE, REDUCE-IT, COSMOS, SPRINT, ASPREE, VITAL, CTT, Ray 2010, Mortensen 2018, Budoff garlic trials, MK-7 trials, and the supplement metas listed in the Studies tab). Power scores summarize the trial effect sizes and how directly each was measured. Ranges show what trials measured. Real results depend on her starting numbers, the dose, and staying consistent. This guide is information, not medical advice. Doses above 500 mg of niacin, fish oil above 3 g, or anything combined with prescription drugs need a doctor in the loop.
 </footer>
 
 </div>
