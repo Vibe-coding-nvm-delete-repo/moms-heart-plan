@@ -114,15 +114,17 @@
   #foods .foods-count{color:var(--muted); font-size:.9rem; margin-bottom:var(--s2);}
   #foods .foods-list{background:var(--card); border:1px solid var(--line); border-radius:12px; overflow:hidden;}
   #foods .foods-list[hidden]{display:none;}
-  #foods .foods-item{display:grid; grid-template-columns:minmax(0,1fr) auto; column-gap:var(--s3); padding:var(--s3) var(--s4); border-bottom:1px solid var(--line);}
+  #foods .foods-item{display:grid; grid-template-columns:160px minmax(0,1fr) auto; column-gap:var(--s3); padding:var(--s4); border-bottom:1px solid var(--line);}
+  #foods .foods-photo{grid-column:1; grid-row:1 / span 3; display:block; width:160px; height:120px; object-fit:cover; border-radius:8px; background:var(--bg);}
+  #foods .foods-item > div:not(.foods-scores){grid-column:2; grid-row:1;}
   #foods .foods-item:last-child{border-bottom:0;}
   #foods .foods-item[hidden],#foods .foods-empty[hidden]{display:none;}
   #foods .foods-name{font-size:1.05rem; line-height:1.35; font-weight:700; overflow-wrap:anywhere;}
   #foods .foods-category{display:block; font-size:.78rem; line-height:1.4; color:var(--muted); font-weight:600; margin-top:2px;}
-  #foods .foods-scores{display:flex; gap:var(--s2); align-items:start;}
+  #foods .foods-scores{grid-column:3; grid-row:1; display:flex; gap:var(--s2); align-items:start;}
   #foods .foods-score{min-width:70px; text-align:center; font-size:.84rem; font-weight:700; color:var(--navy);}
   #foods .foods-score strong{display:block; background:var(--navy); color:#fff; border-radius:6px; font-size:1rem; line-height:1.35; margin-top:4px; padding:4px;}
-  #foods .foods-why,#foods .foods-try{grid-column:1 / -1; margin-top:6px; font-size:.91rem; line-height:1.5; overflow-wrap:anywhere;}
+  #foods .foods-why,#foods .foods-try{grid-column:2 / -1; margin-top:6px; font-size:.91rem; line-height:1.5; overflow-wrap:anywhere;}
   #foods .foods-try{color:#3c4a5d; margin-top:2px;}
   #foods .foods-empty{padding:var(--s4); background:var(--card); border:1px solid var(--line); border-radius:10px;}
   #foods .foods-note{max-width:75ch; margin-top:var(--s5); font-size:.93rem;}
@@ -131,8 +133,10 @@
   #foods .foods-sources summary{cursor:pointer; font-weight:700; min-height:44px; display:flex; align-items:center;}
   #foods .foods-sources ul{padding-left:var(--s4); overflow-wrap:anywhere;}
   #foods .foods-sources li{margin:var(--s2) 0;}
+  #foods .foods-photo-note{font-size:.85rem; color:var(--muted); margin-bottom:var(--s3); max-width:75ch;}
+  #foods .foods-photo-credits{font-size:.85rem; overflow-wrap:anywhere;}
   @media(max-width:800px){#foods .foods-controls{grid-template-columns:repeat(2,minmax(0,1fr));} #foods .foods-control:first-child{grid-column:1 / -1;} #foods .foods-reset{width:100%; grid-column:1 / -1;}}
-  @media(max-width:520px){#foods .foods-item{padding:var(--s3);} #foods .foods-scores{grid-column:1 / -1; margin-top:8px;} #foods .foods-score{display:flex; min-width:0; align-items:center; gap:7px; text-align:left;} #foods .foods-score strong{margin:0; min-width:34px; text-align:center;} #foods .foods-why{margin-top:var(--s2);}}
+  @media(max-width:680px){#foods .foods-item{grid-template-columns:88px minmax(0,1fr); padding:var(--s3);} #foods .foods-photo{width:88px; height:88px; grid-row:1 / span 2;} #foods .foods-scores{grid-column:2; grid-row:2; flex-wrap:wrap; margin-top:8px; gap:8px;} #foods .foods-score{display:flex; min-width:0; align-items:center; gap:5px; text-align:left;} #foods .foods-score strong{margin:0; min-width:34px; text-align:center;} #foods .foods-why,#foods .foods-try{grid-column:1 / -1;} #foods .foods-why{margin-top:var(--s2);}}
   @media(max-width:680px){ .hero{grid-template-columns:1fr;} .bar-row{grid-template-columns:120px 1fr 108px;} .spec .line{grid-template-columns:1fr;} body{font-size:16px;} .bar-val{font-size:.74rem;} }
   @media print{ .tab{display:block !important;} .tabs{display:none;} header{border-radius:0;} body{padding:0; background:#fff; font-size:12px;} .panel,table,.hero,.spec,.fig{break-inside:avoid;} }
 </style>
@@ -366,6 +370,7 @@
     <button class="foods-reset" id="foods-reset" type="button">Reset filters</button>
   </div>
   <p class="foods-count" id="foods-count" role="status" aria-live="polite"></p>
+  <p class="foods-photo-note">Photos show the food or a serving idea. Follow the text and package label for salt, sugar, fat and preparation.</p>
   <div class="foods-list" id="foods-list">
     <article class="foods-item" data-category="legumes" data-health="10" data-fit="10"><div><h3 class="foods-name">Lentils</h3><span class="foods-category">Beans and lentils</span></div><div class="foods-scores"><span class="foods-score">Health<strong>10/10</strong></span><span class="foods-score">Diet fit<strong>10/10</strong></span></div><p class="foods-why">Fiber and plant protein make a filling meat swap.</p><p class="foods-try"><b>Try:</b> Cook a half cup into tomato soup or a warm salad.</p></article>
     <article class="foods-item" data-category="legumes" data-health="9" data-fit="10"><div><h3 class="foods-name">Chickpeas</h3><span class="foods-category">Beans and lentils</span></div><div class="foods-scores"><span class="foods-score">Health<strong>9/10</strong></span><span class="foods-score">Diet fit<strong>10/10</strong></span></div><p class="foods-why">Fiber and protein work well in plant-based meals.</p><p class="foods-try"><b>Try:</b> Rinse canned chickpeas and add to salad with olive oil.</p></article>
@@ -455,6 +460,7 @@
     <li><a href="https://pubmed.ncbi.nlm.nih.gov/38819819/" target="_blank" rel="noopener noreferrer">Mediterranean diet and women (JAMA 2024)</a>: an observational association across 25,315 women, not a randomized diet result.</li>
     <li><a href="https://pubmed.ncbi.nlm.nih.gov/29897866/" target="_blank" rel="noopener noreferrer">Corrected PREDIMED trial (NEJM 2018)</a>: heart-event rates and the random assignment caveat.</li>
   </ul></details>
+  <details class="foods-sources" id="foods-photo-sources"><summary>Photo credits</summary><p class="foods-photo-note">Photos were resized and converted to WebP, with a center crop for display. Each photo keeps its listed license. Product photos are examples, not brand endorsements.</p><ul class="foods-photo-credits" id="foods-photo-credits"></ul><p><a href="assets/foods/credits.json" target="_blank" rel="noopener noreferrer">Open the full photo-credit file</a></p></details>
 </section>
 
 <!-- ============ TAB 2: LIST ============ -->
@@ -851,6 +857,50 @@
     var count = document.getElementById('foods-count');
     var empty = document.getElementById('foods-empty');
     var items = Array.from(list.querySelectorAll('.foods-item'));
+    items.forEach(function(item){
+      var name = item.querySelector('.foods-name').textContent;
+      var image = document.createElement('img');
+      image.className = 'foods-photo';
+      image.src = 'assets/foods/' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '.webp';
+      image.alt = name === 'Oat bran' ? 'Bags labeled oat bran' : name === 'Plain low-fat Greek yogurt' ? 'A bowl of plain yogurt' : name;
+      image.width = 160;
+      image.height = 120;
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      item.prepend(image);
+    });
+    var photoSources = document.getElementById('foods-photo-sources');
+    photoSources.addEventListener('toggle', function(){
+      if(!photoSources.open || photoSources.dataset.loaded) return;
+      photoSources.dataset.loaded = 'true';
+      var credits = document.getElementById('foods-photo-credits');
+      fetch('assets/foods/credits.json').then(function(response){
+        if(!response.ok) throw new Error('Photo credit file unavailable');
+        return response.json();
+      }).then(function(photos){
+        photos.forEach(function(photo){
+          var row = document.createElement('li');
+          var source = document.createElement('a');
+          source.href = photo.source;
+          source.textContent = photo.food + ': ' + photo.title.replace(/^File:/, '');
+          source.target = '_blank';
+          source.rel = 'noopener noreferrer';
+          row.append(source, document.createTextNode(' by ' + (photo.author || 'author listed at source') + '. '));
+          if(photo.licenseUrl){
+            var license = document.createElement('a');
+            license.href = photo.licenseUrl;
+            license.textContent = photo.license;
+            license.target = '_blank';
+            license.rel = 'noopener noreferrer';
+            row.append(license);
+          } else row.append(document.createTextNode(photo.license));
+          credits.appendChild(row);
+        });
+      }).catch(function(){
+        credits.textContent = 'Credits could not load here. Use the full photo-credit file below.';
+        delete photoSources.dataset.loaded;
+      });
+    });
     var order = new Map(items.map(function(item, index){ return [item, index]; }));
     function updateFoods(){
       var query = search.value.trim().toLocaleLowerCase();
