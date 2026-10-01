@@ -1,0 +1,48 @@
+[
+  {
+    "file": "assets/fish-oil/capsules.webp",
+    "title": "Fish Oil Capsules.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Fish_Oil_Capsules.jpg",
+    "author": "Oddman47",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "changes": "Resized and converted to WebP; displayed with a center crop.",
+    "bytes": 49550,
+    "sha256": "7fa542b2d6d3e304cd4a14337d529bdbf2f74956aa772c8ee15bb366b5096992",
+    "width": 640,
+    "height": 427
+  },
+  {
+    "title": "Ground flaxseed in a glass jar",
+    "url": "https://live.staticflickr.com/65535/51205516527_1874433052_b.jpg",
+    "source": "https://www.flickr.com/photos/26344495@N05/51205516527",
+    "author": "Ivan Radic",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "food": "Ground flaxseed",
+    "file": "assets/foods/ground-flaxseed.webp",
+    "alt": "Ground flaxseed",
+    "width": 360,
+    "height": 480,
+    "bytes": 46512,
+    "sha256": "118a21e9f1ff39ca1fa92a33edfa4e63d89ffad1b5b221ee60c58609ed92f3ca",
+    "changes": "Resized and converted to WebP; displayed with a center crop."
+  },
+  {
+    "title": "File:Grilled plated salmon fillet (cropped).jpg",
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Grilled_plated_salmon_fillet_%28cropped%29.jpg/500px-Grilled_plated_salmon_fillet_%28cropped%29.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Grilled_plated_salmon_fillet_(cropped).jpg",
+    "author": "DanaTentis",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "description": "A grilled, plated salmon fillet",
+    "width": 480,
+    "height": 319,
+    "food": "Salmon",
+    "file": "assets/foods/salmon.webp",
+    "alt": "Salmon",
+    "bytes": 42684,
+    "sha256": "f6dd4878a6713f220d19c96588cd24c664e0596e346d5be84de8cf8a1a7fe65c",
+    "changes": "Resized and converted to WebP; displayed with a center crop."
+  }
+]
